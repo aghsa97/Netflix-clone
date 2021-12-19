@@ -1,11 +1,11 @@
-import { Container, Input, Button, Title } from "./styles/opt-form";
+import { Container, Input, Button, Text, Break } from "./styles/opt-form";
 
 export default function OptForm({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
 
-OptForm.Title = function OptFormTitle({ children, ...restProps }) {
-  return <Title {...restProps}>{children}</Title>;
+OptForm.Text = function OptFormText({ children, ...restProps }) {
+  return <Text {...restProps}>{children}</Text>;
 };
 
 OptForm.Input = function OptFormInput({ ...restProps }) {
@@ -18,4 +18,8 @@ OptForm.Button = function OptFormButton({ children, ...restProps }) {
       {children} <img src="images/icons/chevron-right.png" alt="chevron" />
     </Button>
   );
+};
+
+OptForm.Break = function OptFormBreak({ ...restProps }) {
+  return <Break {...restProps} />;
 };
